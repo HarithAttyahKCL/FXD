@@ -13,8 +13,7 @@ This problem can be approached using a naive solution:
 - Detect the RGB of a pixel and compare it to the dictionary. If a key is found then the value must update, if not: add the key and initialise value as 1. 
 - This repeates until we have the final dictionary and we simply return the key with the highest value.
 
-This approach has multiple problems, for an image with a large colour space the performance degrades and the count of a specific value might be meaningless in the case that an image has a large range of RGB values. Wouldnt it be better to have some kind of statistical
-calculation using the dominant colours instead?
+This approach has multiple problems, for an image with a large colour space the performance degrades and the count of a specific value might be meaningless in the case that an image has a large range of RGB values. The mode in this case would not be an appropriate measure. Wouldnt it be better to have some kind of calculated value for the dominant colours instead?
 
  **Note:** Another idea I have is another optimisation, consider using a lossless compression algorithm and then performing the algorithm as this reduces the amount of data required to process without losing colour accuracy.
 
