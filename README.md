@@ -16,11 +16,11 @@ This problem can be approached using a naive solution:
 This approach has multiple problems, for an image with a large colour space the performance degrades and the count of a specific value might be meaningless in the case that an image has a large range of RGB values. Wouldnt it be better to have some kind of statistical
 calculation using the dominant colours instead?
 
- **NB:** Another idea I have is another optimisation, consider using a lossless compression algorithm and then performing the algorithm as this reduces the amount of data required to process without losing colour accuracy.
+ **Note:** Another idea I have is another optimisation, consider using a lossless compression algorithm and then performing the algorithm as this reduces the amount of data required to process without losing colour accuracy.
 
 ### This is actually a clustering problem!
 Returning back to the original intuition of using a more sensible measure of dominance than a simple pixel count, performing a clustering algorithm like kmeans can produce for us clusters of dominant colours and then we can simple retrieve the mean of the most dominant (ie the biggest) cluster. Adopting this approach not only improves our solution for Challenge 1, we actually spoil ourselves of some of the fun awaiting us in Challenge 2, because ranking our clusters in terms of size also produces us a ranking of the dominant colours!
 
- **NB:** Although this approach is promising we have to manually set up k (the amount of clusters). The number of clusters will affect the results produced by the algorithm, might be worth investigating both naive and kmeans with multiple ks. 
+ **Note:** Although this approach is promising we have to manually set up k (the amount of clusters). The number of clusters will affect the results produced by the algorithm, might be worth investigating both naive and kmeans with multiple ks. 
 
 PS: worry about Docker and scalability later, try and focus on visualising results?
