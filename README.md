@@ -23,4 +23,5 @@ Returning back to the original intuition of using a more sensible measure of dom
 
  **Note:** Although this approach is promising we have to manually set up k (the amount of clusters). The number of clusters will affect the results produced by the algorithm, might be worth investigating both naive and kmeans with multiple ks. 
 
-PS: worry about Docker and scalability later, try and focus on visualising results?
+PS: Multithreading!
+    Docker/ Containerization
