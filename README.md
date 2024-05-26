@@ -3,11 +3,9 @@ Program that finds the dominant colours of an image and outputs a graph of the t
 
 ## How to run:
 ### Install Requirements (In Python Virtual Environment Of Your Choice) 
-<pre>
 ```bash
 pip install -r requirements.txt
 ```
-</pre>
 
 ### Execute this command
 ```bash
