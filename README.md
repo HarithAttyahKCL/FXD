@@ -2,12 +2,22 @@
 Program that finds the dominant colours of an image and outputs a graph of the top N colours in 100x100 swatches.
 
 ## How to run:
-### Install Requirements (In Python Virtual Environment Of Your Choice) 
+
+### Use Docker:
+Navigate to the working directory and run the following commands:
+```bash
+ docker build -t fxdigitalapp .
+```
+```bash
+ docker run -it fxdigitalapp
+```
+
+### Install Requirements (In Python Virtual Environment Of Your Choice if You dont want to use Docker) 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Execute this command
+## Execute this command
 ```bash
 python main.py <ImageAddress> <naive/kmeans> <numberOfColours>
 ```
