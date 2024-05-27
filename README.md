@@ -12,11 +12,6 @@ Navigate to the working directory and run the following commands:
  docker run -it fxdigitalapp
 ```
 
-### Install Requirements (In Python Virtual Environment Of Your Choice if You dont want to use Docker) 
-```bash
-pip install -r requirements.txt
-```
-
 ## Execute this command
 ```bash
 python main.py <ImageAddress> <naive/kmeans> <numberOfColours>
