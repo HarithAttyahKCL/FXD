@@ -16,3 +16,6 @@ Returning back to the original intuition of using a more sensible measure of dom
 
 
 To do/Extend: Multithreading?
+
+To do/Extend: Ignore Background?
+
