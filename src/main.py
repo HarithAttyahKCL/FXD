@@ -1,9 +1,9 @@
 import sys
 import cv2
 import naive
-import kmeans
+import kmeans 
 import validate
-import colour_swatches
+import colour_swatches 
 
 
 # Run any validations on command.

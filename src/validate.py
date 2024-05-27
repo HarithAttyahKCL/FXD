@@ -7,7 +7,7 @@ def validate_command():
 
 def validate_length():
     if len(sys.argv) != 4:
-        print("Usage: python main.py <ImageAddress> <naive/kmeans> <numberOfColours>")
+        print("Usage: python src/main.py <ImageAddress> <naive/kmeans> <numberOfColours>")
         sys.exit(1)
 
 def validate_method():
