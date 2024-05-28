@@ -9,7 +9,7 @@ Program that finds the dominant colours of an image and outputs a graph of the t
 virtualenv venv
 source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
 ```
--Install libs
+- Install libs
 ```sh
 pip install -r requirements.txt # Verify with 'pip list' if you wish.
 ```
