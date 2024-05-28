@@ -22,3 +22,9 @@ As well as outputing the exact RGB values, I think it would be nice to see how t
 ## Further optimisations? Multithreading!
 
 To my surprise, multithreading the naive solution seems to slow it down. This could be because multiple threads compete for the same resource/map in my implementation. I did also try giving each thread their own map, but this meant that joining all the maps in the end results in a greater wait time anyway due to the time complexity.
+
+However, Multithreading works great on the kmeans clustering solution.
+
+## Why ignore colours anyway? 
+
+Ignoring the colours would probably involve excluding the rgb values when they show up in any of our calculations. I couldnt help but notice black and white are commonly ignored because the background naturally contains a lot of those particular colours. What if we seperate background and subject so we can get more insightful results?

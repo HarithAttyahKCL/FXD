@@ -2,8 +2,8 @@ import sys
 
 #Static Variables that contain messages and allowed strings
 USAGE_MESSAGE = "Usage: python src/main.py <ImageAddress> <naive/kmeans> <numberOfColours>"
-ALLOWED_METHODS = set(['naive','kmeans','naivemt'])
-METHODS_MESSAGE_ALLOWED = "<naive/kmeans> only accepts 'naive' or 'kmeans' or 'naivemt'"
+ALLOWED_METHODS = set(['naive','kmeans','naivemt', 'kmeansmt'])
+METHODS_MESSAGE_ALLOWED = "<naive/kmeans> only accepts: " + str(ALLOWED_METHODS)
 NUMBER_OF_COLOURS_MESSAGE_DIGIT = "<numberOfColours must be a digit."
 NUMBER_OF_COLOURS_MESSAGE_ZERO = "<numberOfColours must be at least 1"
 
