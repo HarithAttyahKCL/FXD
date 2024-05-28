@@ -15,7 +15,8 @@ This approach works well if we want exact rgb values for an image, however for l
 Returning back to the original intuition of using a more sensible measure of dominance than a simple pixel count, performing a clustering algorithm like kmeans can produce for us clusters of dominant colours and then we can simple retrieve the mean of the most dominant (ie the biggest) cluster.
 
 
-To do/Extend: Multithreading?
+### How to show the results?
 
-To do/Extend: Ignore Background?
+As well as outputing the exact RGB values, I think it would be nice to see how the colours look compared to each other. So I decided to make a fashion inspired Swatch chart with the dominant colours.
 
+## Further optimisations? Multithreading!

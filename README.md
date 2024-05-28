@@ -3,17 +3,18 @@ Program that finds the dominant colours of an image and outputs a graph of the t
 
 ## How to run:
 
-### Use Docker:
-Navigate to the working directory and run the following commands:
-```bash
- docker build -t fxdigitalapp .
+- Navigate to project directory
+- Create and activate virtual environment
+```sh
+virtualenv venv
+source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
 ```
-```bash
- docker run -it fxdigitalapp
+-Install libs
+```sh
+pip install -r requirements.txt # Verify with 'pip list' if you wish.
 ```
-
 ## Execute this command
-```bash
+```sh
 python main.py <ImageAddress> <naive/kmeans> <numberOfColours>
 ```
 - ImageAddress: the address of your image, ie:python main.py /home/harith/Downloads/trail-5yOnGsKUNGw-unsplash.jpg 
