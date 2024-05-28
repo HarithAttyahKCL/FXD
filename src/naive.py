@@ -16,7 +16,7 @@ def dominantColour_naive(image: np.ndarray, numberOfColours: int) -> list:
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     flat = rgb_image.reshape(-1,3)
     
-    # Using our dictionary/hashmap to 
+    # Using our dictionary/hashmap to store counts
     rgb_counts = {}
     for rgb in flat:
         rgb_tuple=tuple(rgb)

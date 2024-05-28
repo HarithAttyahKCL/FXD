@@ -20,3 +20,5 @@ Returning back to the original intuition of using a more sensible measure of dom
 As well as outputing the exact RGB values, I think it would be nice to see how the colours look compared to each other. So I decided to make a fashion inspired Swatch chart with the dominant colours.
 
 ## Further optimisations? Multithreading!
+
+To my surprise, multithreading the naive solution seems to slow it down. This could be because multiple threads compete for the same resource/map in my implementation. I did also try giving each thread their own map, but this meant that joining all the maps in the end results in a greater wait time anyway due to the time complexity.

@@ -1,8 +1,7 @@
 import sys
 import cv2
 import time
-import naive
-import kmeans 
+import naive, kmeans, naivemt
 import validate
 import colour_swatches 
 
@@ -18,10 +17,17 @@ def handle_kmeans(image, numberOfColours):
     stop_time = time.time() - start_time
     print("Time Elapsed: " + str(stop_time) + "s")
     colour_swatches.display_colours(dominants)
-    
+
+def handle_naivemt(image, numberOfColours):
+    dominants = naivemt.dominantColour_naivemt(image = image,numberOfColours= int(numberOfColours),num_threads= 4)
+    stop_time = time.time() - start_time
+    print("Time Elapsed: " + str(stop_time) + "s")
+    colour_swatches.display_colours(dominants)
+
 METHOD_MAP = {
     "naive": handle_naive,
-    "kmeans": handle_kmeans
+    "kmeans": handle_kmeans,
+    "naivemt": handle_naivemt
 }
 
 # Run any validations on command.
