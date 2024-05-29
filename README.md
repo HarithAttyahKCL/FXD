@@ -6,8 +6,8 @@ Program that finds the dominant colours of an image and outputs a graph of the t
 - Navigate to project directory
 - Create and activate virtual environment
 ```sh
-virtualenv venv
-source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
+python -m venv myenv
+source venv/bin/activate  # On Windows use: .\myenv\Scripts\activate
 ```
 - Install libs
 ```sh
