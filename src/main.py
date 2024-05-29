@@ -1,13 +1,20 @@
 import sys
 import cv2
 import time
-import naive, kmeans, naivemt, kmeansmt
+import naive, kmeans, naivemt, kmeansmt, gmm
 import validate
 import colour_swatches 
 
 NUMBER_OF_THREADS = 2
 
 # Define Methods and method handling
+def handle_gmm(image, numberOfColours):
+    dominants = gmm.dominantColour_gmm(image = image,numberOfColours= int(numberOfColours))
+    stop_time = time.time() - start_time
+    print("Time Elapsed: " + str(stop_time) + " seconds")
+    print(str(dominants))
+    colour_swatches.display_colours(dominants)
+
 def handle_naive(image, numberOfColours):
     dominants = naive.dominantColour_naive(image = image,numberOfColours= int(numberOfColours))
     stop_time = time.time() - start_time
@@ -40,7 +47,8 @@ METHOD_MAP = {
     "naive": handle_naive,
     "kmeans": handle_kmeans,
     "naivemt": handle_naivemt,
-    "kmeansmt": handle_kmeansmt
+    "kmeansmt": handle_kmeansmt,
+    "gmm": handle_gmm
 }
 
 # Run any validations on command.
