@@ -12,24 +12,28 @@ def handle_naive(image, numberOfColours):
     dominants = naive.dominantColour_naive(image = image,numberOfColours= int(numberOfColours))
     stop_time = time.time() - start_time
     print("Time Elapsed: " + str(stop_time) + " seconds")
+    print(str(dominants))
     colour_swatches.display_colours(dominants)
 
 def handle_kmeans(image, numberOfColours):
     dominants = kmeans.dominantColour_kmeans(image = image,numberOfColours= int(numberOfColours))
     stop_time = time.time() - start_time
     print("Time Elapsed: " + str(stop_time) + " seconds")
+    print(str(dominants))
     colour_swatches.display_colours(dominants)
 
 def handle_naivemt(image, numberOfColours):
     dominants = naivemt.dominantColour_naivemt(image = image,numberOfColours= int(numberOfColours),num_threads= NUMBER_OF_THREADS)
     stop_time = time.time() - start_time
     print("Time Elapsed: " + str(stop_time) + " seconds")
+    print(str(dominants))
     colour_swatches.display_colours(dominants)
 
 def handle_kmeansmt(image,numberOfColours):
     dominants = kmeansmt.dominantColour_kmeansmt(image = image,numberOfColours= int(numberOfColours),num_threads= NUMBER_OF_THREADS)
     stop_time = time.time() - start_time
     print("Time Elapsed: " + str(stop_time) + " seconds")
+    print(str(dominants))
     colour_swatches.display_colours(dominants)
 
 METHOD_MAP = {
