@@ -15,9 +15,9 @@ pip install -r requirements.txt # Verify with 'pip list' if you wish.
 ```
 ## Execute this command
 ```sh
-python main.py <ImageAddress> <naive/kmeans> <numberOfColours>
+python main.py <ImageAddress> <method> <numberOfColours>
 ```
 - ImageAddress: the address of your image, ie:python main.py /home/harith/Downloads/trail-5yOnGsKUNGw-unsplash.jpg 
-- naive/kmeans: the method used for the selection of dominant colours. Either 'naive' or 'kmeans'
+- nmethod: the method used for the selection of dominant colours. Either 'naive' or 'kmeans' or the multithreaded versions.
 - numberOfColours: the number of dominant colours we want to return.
 
