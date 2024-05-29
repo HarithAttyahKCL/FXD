@@ -29,6 +29,14 @@ However, Multithreading works great on the kmeans clustering solution.
 
 Ignoring the colours would probably involve excluding the rgb values when they show up in any of our calculations. I couldnt help but notice black and white are commonly ignored because the background naturally contains a lot of those particular colours. What if we seperate background and subject so we can get more insightful results?
 
+
+## Still in progress/ Broken
+For fun, this doesnt work/ I did not finish in time
+
+### Finding a mask:
+
+A built in tool using OpenCV grabcut 
+
 ### Image sementation models!
 
 In order to seperate images into their subject and background, I decided to look into image segmentation models on kaggle. I found some neat ones like SAM from meta that allows you to select a point on an image. Google's PaliGemma, GPT4. And a cool one called deeplabv3 that allows images to be seperated by semantics (think asking it to seperate labels like cat or dogs). Naturally a label like subject sounds more suited to the task so I decided to proceed with using deeplabv3.
