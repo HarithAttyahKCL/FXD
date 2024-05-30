@@ -2,22 +2,24 @@ import sys
 import cv2
 import time
 from methods import method
-import validate
+import validators.validate as validator
 import colour_swatches 
 
 # Run any validations on command.
-validate.validate_command()
+validator.validate_command()
 
 # Store start time
 start_time = time.time() 
 
+# Define list of parameters for use by method:
+params = []
+
 # Extract variables from command-line arguments
-image_path = sys.argv[1]
-method_used = sys.argv[2]
-numberOfColours = sys.argv[3]
+for argument in range(1,len(sys.argv)):
+    params.append(sys.argv[argument])
 
 # Read the image
-image = cv2.imread(image_path)
+image = cv2.imread(params[0])
 
 # Check if the image was successfully loaded
 if image is not None:
@@ -27,7 +29,7 @@ else:
     sys.exit(1)
 
 # find and print the N dominant colours using method
-dominants = method.METHOD_MAP[method_used](image, numberOfColours)
+dominants = method.apply_method(image, params)
 stop_time = time.time() - start_time
 print("Time Elapsed: " + str(stop_time) + " seconds")
 print(str(dominants))

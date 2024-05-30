@@ -2,10 +2,10 @@ import sys
 
 #Static Variables that contain messages and allowed strings
 USAGE_MESSAGE = "Usage: python src/main.py <ImageAddress> <method> <numberOfColours>"
-ALLOWED_METHODS = set(['naive','kmeans','naivemt', 'kmeansmt', 'gmm'])
-METHODS_MESSAGE_ALLOWED = "<method> only accepts: " + str(ALLOWED_METHODS)
-NUMBER_OF_COLOURS_MESSAGE_DIGIT = "<numberOfColours must be a digit."
-NUMBER_OF_COLOURS_MESSAGE_ZERO = "<numberOfColours must be at least 1"
+ALLOWED_METHODS = set(['naive','kmeans','gmm'])
+METHODS_MESSAGE_ALLOWED = "For four args, <method> only accepts: " + str(ALLOWED_METHODS)
+NUMBER_OF_COLOURS_MESSAGE_DIGIT = "<numberOfColours> must be a digit."
+NUMBER_OF_COLOURS_MESSAGE_ZERO = "<numberOfColours> must be at least 1"
 
 def validate_command():
     validate_length()
