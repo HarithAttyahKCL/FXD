@@ -12,6 +12,12 @@ validator.validate_command()
 start_time = time.time() 
 
 # Define list of parameters for use by method:
+'''
+    index 0: image path
+    index 1: method name
+    index 2: number of colours
+    index 3: number of Threads
+'''
 params = []
 
 # Extract variables from command-line arguments
